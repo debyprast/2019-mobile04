@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
         <Button
+            android:onClick="handleExplicitIntent"
             android:id="@+id/button_explicit"
             android:text="@string/explicit_intent"
             android:layout_width="match_parent"
@@ -38,10 +39,12 @@
             />
 
         <Button
+            android:onClick="handleExit"
             android:id="@+id/button_exit"
             android:text="@string/exit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
+
 
 </LinearLayout>
