@@ -3,33 +3,30 @@ package id.ac.polinema.intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import id.ac.polinema.intent.model.User;
 
 public class ProfileBundleActivity extends AppCompatActivity {
 
-    private TextView usernameText;
-    private TextView nameText;
-    private TextView ageText;
+    private EditText usernameInput;
+    private EditText nameInput;
+    private EditText ageInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_bundle);
-
+        usernameInput = findViewById(R.id.input_username);
+        nameInput = findViewById(R.id.input_name);
+        ageInput = findViewById(R.id.input_age);
         // TODO: bind here
-        usernameText = findViewById(R.id.input_username);
-        nameText = findViewById(R.id.input_name);
-        ageText = findViewById(R.id.input_age);
-
         Bundle extras = getIntent().getExtras();
-        String username = (String) extras.get(BundleActivity.USERNAME_KEY);
-        String name = (String) extras.get(BundleActivity.NAME_KEY);
-        String age = (String) extras.get(BundleActivity.AGE_KEY);
+
         if (extras != null) {
             // TODO: display value here
-            usernameText.setText(username);
-            nameText.setText(name);
-            ageText.setText(age);
+            User u = extras.getParcelable("User");
         }
     }
 }

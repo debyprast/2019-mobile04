@@ -10,6 +10,13 @@
     tools:context=".MainActivity">
 
         <Button
+            android:id="@+id/button_explicit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="handleExplicitIntent"
+            android:text="@string/explicit_intent" />
+
+        <Button
             android:id="@+id/button_implicit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -17,17 +24,17 @@
             android:text="@string/implicit_intent" />
 
         <Button
-            android:onClick="handleBundleInten"
             android:id="@+id/button_bundle"
-            android:text="@string/android_bundle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:onClick="handleBundleInten"
+            android:text="@string/android_bundle" />
 
         <Button
             android:id="@+id/button_parcelable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="handleParcel"
             android:text="@string/parcelable" />
 
         <Button
@@ -37,13 +44,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
-
-        <Button
-            android:id="@+id/button_explicit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="handleExplicitIntent"
-            android:text="@string/explicit_intent" />
-
 
 </LinearLayout>
